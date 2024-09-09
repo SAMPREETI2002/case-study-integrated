@@ -1,7 +1,7 @@
 // src/pages/LoggedInLandingPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css'; // Import your CSS file
+import './Landingpage.css'; // Import your CSS file
 function LoggedInLandingPage() {
   return (
     <div className="landing-container">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
-import '../App.css'; // Import your CSS file
+import './Landingpage.css'; // Import your CSS file
+
 function LandingPage() {
   return (
     <div className="landing-container">
@@ -35,6 +36,5 @@ function LandingPage() {
     </div>
   );
 }
-
 
 export default LandingPage;

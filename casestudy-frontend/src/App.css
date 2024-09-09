@@ -51,7 +51,7 @@ p {
   margin-bottom: 40px;
 }
 
-button {
+/* button {
   padding: 10px 20px;
   background-color: #910e49;
   color: #42da31;
@@ -68,7 +68,7 @@ button {
 }
 
 .plan {
-  background-color: #47d5d0b3;
+  background-color: #083D77;
   font-style: italic;
   border: 1px solid #ccc;
   padding: 20px;
@@ -86,7 +86,7 @@ button {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
-}
+} */
 
 .explore-all {
   display: block;

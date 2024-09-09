@@ -1,13 +1,12 @@
 /* Navbar styling */
 .navbar {
-  background-color: rgb(2, 2, 58); /* Navbar background */
+  background-color: #083D77; /* Updated Navbar background */
   padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
   font-weight: bold;
-  
-  color: #000;
+  color: #fff; /* White text for the brand */
 }
 
 .navbar-nav {
@@ -19,15 +18,14 @@
 }
 
 .navbar-nav .nav-link {
-  color: #fff;
-  background-color: #3C2E83; /* Same as navbar background */
+  color: #fff; /* White text */
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  background-color: transparent; /* No background color */
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #ffffff; /* White background on hover */
-  color: #000; /* Black text on hover */
+  color: Black; /* Gold color on hover for text */
 }
 
 .navbar-nav.me-auto {
@@ -38,6 +36,7 @@
   margin-left: auto; /* Push the profile section to the right */
 }
 
+/* Dropdown Menu */
 .dropdown-menu {
   background-color: #ffffff; /* Background color of the dropdown */
   border: 1px solid #ddd; /* Light border for the dropdown */
@@ -47,7 +46,7 @@
 }
 
 .dropdown-item {
-  color: #000; /* Color of the dropdown items */
+  color: #000; /* Black text for the dropdown items */
 }
 
 .dropdown-item:hover {

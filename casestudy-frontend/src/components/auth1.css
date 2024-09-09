@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #48CFCB; /* Match background color to button color */
+    background-color:  #083d77; /* Match background color to button color */
   }
   
   /* Style for the authentication box */
@@ -61,7 +61,7 @@
   /* Button styling */
   .auth-btn {
     padding: 10px;
-    background-color: #48CFCB; /* Button background color */
+    background-color:  #083d77; /* Button background color */
     color: white;
     border: none;
     cursor: pointer;

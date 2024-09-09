@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #48CFCB; /* Match background color to button color */
+  background-color: white; /* Match background color to button color */
 }
 
 /* Style for the authentication box */
@@ -12,7 +12,7 @@
   background-color: white;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow effect */
   width: 100%;
   max-width: 400px; /* Constrain the width of the box */
 }
@@ -45,9 +45,9 @@
 }
 
 /* Button styling */
-.auth-btn {
+.button {
   padding: 10px;
-  background-color: #48CFCB; /* Button background color */
+  background-color: #083d77; /* Button background color */
   color: white;
   border: none;
   cursor: pointer;
@@ -58,12 +58,6 @@
 }
 
 /* Button hover effect */
-.auth-btn:hover {
-  background-color: #003366; /* Darker blue on hover */
-}
-
-/* Link styling inside the button */
-.auth-btn a {
-  color: white;
-  text-decoration: none;
+.button:hover {
+  background-color: #001f3f; /* Darker shade on hover */
 }

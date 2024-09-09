@@ -1,86 +1,149 @@
-/* App.css */
- 
-.landing-container {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  color: white;
-}
- 
-.header {
-  background-color: #003087; /* Change the background color */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
- 
-.navbar {
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a, nav button {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: none;
+  background-color: #9c0a20;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none; /* Hide on larger screens */
+}
+
+main {
+  padding: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: transparent; /* Transparent background for the button */
+  color: grey; /* Grey color for the "→" arrow */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px; /* Larger font size for the arrow */
+}
+
+/* Plan container styles */
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.plan {
+  background-color: #083D77; /* Dark blue background for the plan boxes */
+  font-style: italic;
+  color: white; /* White text inside plan boxes */
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px; 
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.buttonplace {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.plan-details {
+  display: flex;
+  justify-content: space-between;
   margin-top: 10px;
 }
- 
-.nav-links {
+
+.explore-all {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+footer nav {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
- 
-.nav-links a {
+
+footer a {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
+  color: #666;
 }
- 
-.main-banner {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px 0;
-  background-color: white;
+
+/* Style for plan buttons */
+.plan-button {
+  background-color: white; /* White background */
+  color: black; /* Black text color */
+  border: none; /* Remove border */
+  padding: 5px 10px; /* Smaller padding for a smaller button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 20px; /* Smaller font size for the arrow */
+  font-weight: bold; /* Bold font weight for the arrow */
+  text-align: center; /* Center the text */
+  display: inline-flex; /* Align items in the center */
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
- 
-.plan-option {
-  flex: 1;
-  max-width: 300px;
+
+/* Optional: hover effect */
+.plan-button:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+  color: black; /* Black text color on hover */
 }
- 
-.plan-card {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
- 
-.plan-card:hover {
-  transform: translateY(-5px);
-}
- 
-.plan-card h3 {
-  color: #003087;
-  margin-bottom: 10px;
-}
- 
-.plan-card p {
-  color: #555;
-}
- 
-.customer-reviews {
-  background-color: #003087;
-  padding: 30px;
-}
- 
-.customer-reviews h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
- 
-.review {
-  background-color: #4b4b4b;
-  color: white;
-  margin: 10px auto;
-  padding: 15px;
-  width: 80%;
-  border-radius: 8px;
-  font-style: italic;
-}
- 
-.review p {
-  margin: 0;
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+  }
+
+  .plans-container {
+    flex-direction: column;
+  }
 }
