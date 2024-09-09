@@ -1,0 +1,55 @@
+/* Navbar background and font color */
+.custom-navbar {
+  background-color: hsl(128, 71%, 38%); /* Custom background color */
+}
+
+.navbar-brand {
+  color: black; /* TELSTAR in black */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Spacing between items */
+}
+
+/* Style for Home and About Us links */
+.navbar-nav .nav-link {
+  color: black; /* Link text color */
+  font-size: 1.1rem;
+  background-color: transparent; /* Transparent background */
+  padding: 0.5rem 1rem; /* Padding for better clickable area */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav .nav-link:hover {
+  color: black; /* Text color on hover */
+  background-color: white; /* Background color on hover */
+}
+
+/* Custom styling for Register and Login buttons */
+.btn-custom {
+  color: white; /* Button text color */
+  background-color: #08bf2c; /* Custom blue color for buttons */
+  border: none;
+
+  padding: 0.5rem 1rem; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+}
+
+
+.btn-custom:hover {
+  background-color: #05a227; /* Darker blue on hover */
+}
+
+/* Additional spacing for buttons */
+.ms-2 {
+  margin-left: 0.5rem; /* Bootstrap spacing utility */
+}

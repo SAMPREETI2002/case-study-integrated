@@ -1,0 +1,100 @@
+/* General container style */
+.container {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styling */
+  header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #48CFCB; /* Background color */
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* Main content styling */
+  main {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Plan container styling */
+  .plans-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .plan {
+    background-color: #48CFCB; /* Plan box color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 300px; /* Increased width for more space */
+    height: 300px; /* Fixed height for consistent sizing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Plan name styling */
+  .plan-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black; /* Plan name color */
+    margin-bottom: 0.9rem;
+    margin-top: 0; /* Ensure the name stays at the top */
+  }
+  
+  /* Style the plan description */
+  .plan-description {
+    font-size: 0.9rem;
+    color: #333; /* Slightly darker black for description */
+    margin-bottom: 1.3 rem;
+    margin-top: 2rem; /* Increased margin to push description lower */
+  }
+  
+  /* Button styling */
+  .buttonplace {
+    position: absolute; /* Position the button at the bottom */
+    bottom: 1rem;
+  }
+  
+  .buy-button {
+    background-color: #004080; /* Slightly less dark blue */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .buy-button:hover {
+    background-color: #003366; /* Darker blue on hover */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    font-size: 1rem;
+  }
+  

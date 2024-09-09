@@ -1,0 +1,86 @@
+/* App.css */
+ 
+.landing-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+}
+ 
+.header {
+  background-color: #003087; /* Change the background color */
+  padding: 20px;
+}
+ 
+.navbar {
+  margin-top: 10px;
+}
+ 
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+ 
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+ 
+.main-banner {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  background-color: white;
+}
+ 
+.plan-option {
+  flex: 1;
+  max-width: 300px;
+}
+ 
+.plan-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+ 
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+ 
+.plan-card h3 {
+  color: #003087;
+  margin-bottom: 10px;
+}
+ 
+.plan-card p {
+  color: #555;
+}
+ 
+.customer-reviews {
+  background-color: #003087;
+  padding: 30px;
+}
+ 
+.customer-reviews h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+ 
+.review {
+  background-color: #4b4b4b;
+  color: white;
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  border-radius: 8px;
+  font-style: italic;
+}
+ 
+.review p {
+  margin: 0;
+}

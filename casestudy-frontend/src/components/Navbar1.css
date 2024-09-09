@@ -1,0 +1,69 @@
+/* Navbar styling */
+.navbar {
+  background-color: #ce1515; /* Navbar background */
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  
+  color: #000;
+}
+
+.navbar-nav {
+  flex-direction: row; /* Ensure items are in a row */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 15px; /* Spacing between items */
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  background-color: #3C2E83; /* Same as navbar background */
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ffffff; /* White background on hover */
+  color: #000; /* Black text on hover */
+}
+
+.navbar-nav.me-auto {
+  margin: 0; /* Align links to the left */
+}
+
+.navbar-nav.ms-auto {
+  margin-left: auto; /* Push the profile section to the right */
+}
+
+.dropdown-menu {
+  background-color: #ffffff; /* Background color of the dropdown */
+  border: 1px solid #ddd; /* Light border for the dropdown */
+  border-radius: 4px; /* Rounded corners */
+  width: 200px; /* Set a fixed width for the dropdown */
+  right: 0; /* Align dropdown to the right */
+}
+
+.dropdown-item {
+  color: #000; /* Color of the dropdown items */
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Light grey background for hover effect */
+}
+
+.dropdown-divider {
+  border-top: 1px solid #ddd; /* Divider color */
+}
+
+.dropdown-item.logout-btn {
+  color: #dc3545; /* Red color for logout button */
+  background-color: transparent; /* Remove default background */
+  border: none; /* Remove border */
+}
+
+.dropdown-item.logout-btn:hover {
+  color: #c82333; /* Darker red for hover effect */
+}
