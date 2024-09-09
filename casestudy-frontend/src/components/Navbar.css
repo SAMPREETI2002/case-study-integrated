@@ -36,7 +36,7 @@
 /* Custom styling for Register and Login buttons */
 .btn-custom {
   color: white; /* Button text color */
-  background-color: #08bf2c; /* Custom blue color for buttons */
+  background-color: rgb(2, 2, 58); /* Custom blue color for buttons */
   border: none;
 
   padding: 0.5rem 1rem; /* Padding for buttons */
@@ -46,7 +46,7 @@
 
 
 .btn-custom:hover {
-  background-color: #05a227; /* Darker blue on hover */
+  background-color: rgb(2, 2, 58); /* Darker blue on hover */
 }
 
 /* Additional spacing for buttons */
