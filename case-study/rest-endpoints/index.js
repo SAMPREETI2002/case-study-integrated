@@ -10,7 +10,8 @@ import cors from "cors"; // Import cors
 import { v4 as uuidv4 } from "uuid";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-
+import nodemailer from 'nodemailer';
+import crypto from 'crypto';
 import {
   Customer,
   Invoice,
@@ -19,12 +20,10 @@ import {
   PrepaidPlan,
 } from "../telecom-billing-system.js";
 
-
-
-
 const app = express();
 const PORT = 9099;
 const SECRET_KEY = process.env.JWT_SECRET;
+let otpStorage = {}; 
 
 // Configure CORS
 const corsOptions = {
@@ -551,6 +550,7 @@ app.post("/generateInvoice", async (req, res) => {
     res.status(500).send("Internal server error.");
   }
 });
+
 
 /**
  * @swagger
@@ -1199,6 +1199,49 @@ app.post("/viewPlan",async (req,res)=>{
  
   res.status(201).json({plan})
 })
+
+app.post('/customerdetails', async (req, res) => {
+  const { email } = req.body;
+  try {
+    // Fetch customer details based on the provided email
+    const customer = await prisma.customer.findUnique({
+      where: { customerMail: email },
+      include: {
+        plansList: true, // If you want to fetch all plans
+        invoiceList: true // In case you want invoice details
+      },
+    });
+
+    if (!customer) {
+      return res.status(404).json({ message: 'Customer not found' });
+    }
+
+    // Fetch the current plan details based on customerCurrPlan ID
+    const currentPlan = await prisma.plan.findUnique({
+      where: { planId: customer.customerCurrPlan }
+    });
+
+    if (!currentPlan) {
+      return res.status(404).json({ message: 'Current plan not found' });
+    }
+
+    // Respond with customer and current plan details
+    res.json({
+      customerName: customer.customerName,
+      customerEmail: customer.customerMail,
+      customerPhone: customer.customerPhone,
+      currentPlan: {
+        planId: currentPlan.planId,
+        planName: currentPlan.planName,
+        ratePerUnit: currentPlan.ratePerUnit,
+        description: currentPlan.description,
+      },
+    });
+  } catch (error) {
+    console.error('Error fetching customer details:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 
 
 

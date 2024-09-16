@@ -4,6 +4,12 @@
   padding: 20px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -36,9 +42,9 @@ nav a, nav button {
   display: none; /* Hide on larger screens */
 }
 
-main {
+/* main {
   padding: 40px;
-}
+} */
 
 h1 {
   font-size: 36px;
@@ -50,43 +56,6 @@ p {
   text-align: center;
   margin-bottom: 40px;
 }
-
-/* button {
-  padding: 10px 20px;
-  background-color: #910e49;
-  color: #42da31;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-}
-
-.plans-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly ;
-}
-
-.plan {
-  background-color: #083D77;
-  font-style: italic;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 300px; 
-  margin-bottom: 20px;
-  border-radius:20px;
-}
-
-.buttonplace{
-  display:flex;
-  justify-content: center;
-  width:auto;
-}
-.plan-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-} */
 
 .explore-all {
   display: block;
@@ -198,7 +167,7 @@ footer a {
 
 /* Styling for the Pay Now button */
 .pay-now-button {
-  background-color: #48CFCB;
+  background-color:  #083D77;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -210,5 +179,5 @@ footer a {
 }
 
 .pay-now-button:hover {
-  background-color: #48CFCB;
+  background-color:  #083D77;
 }

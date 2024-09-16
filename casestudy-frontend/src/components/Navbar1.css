@@ -36,13 +36,16 @@
   margin-left: auto; /* Push the profile section to the right */
 }
 
-/* Dropdown Menu */
 .dropdown-menu {
   background-color: #ffffff; /* Background color of the dropdown */
   border: 1px solid #ddd; /* Light border for the dropdown */
   border-radius: 4px; /* Rounded corners */
   width: 200px; /* Set a fixed width for the dropdown */
   right: 0; /* Align dropdown to the right */
+  left: auto; /* Ensure it's aligned to the right */
+  top: 100%; /* Position below the button */
+  z-index: 1000; /* Ensure it's above other content */
+  transform: translateX(-20%); /* Adjust the position slightly to the left if needed */
 }
 
 .dropdown-item {

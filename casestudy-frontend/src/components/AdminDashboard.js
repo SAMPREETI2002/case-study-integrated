@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css'; // Import your CSS file
+import './adminpage.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext'; // Import the UserContext
 

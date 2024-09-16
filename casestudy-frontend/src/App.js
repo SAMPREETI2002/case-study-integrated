@@ -4,6 +4,7 @@ import AppRoutes from './AppRoutes';  // Import the routing component
 import { UserProvider, UserContext } from './UserContext'; // Import the context provider
 import Navbar from './components/Navbar'; // Unauthenticated Navbar
 import Navbar1 from './components/Navbar1'; // Authenticated Navbar
+import Footer from './components/Footer'; // Import Footer
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const MainApp = () => {
     <>
       {isAuthenticated ? <Navbar1 /> : <Navbar />} {/* Conditionally render Navbar based on authentication */}
       <AppRoutes /> {/* The rest of your application routes */}
+      <Footer /> {/* Add the Footer at the bottom of the app */}
     </>
   );
 };

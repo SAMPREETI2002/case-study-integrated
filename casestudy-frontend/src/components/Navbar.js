@@ -8,6 +8,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container-fluid">
+        {/* Brand name without icon and highlighting */}
         <div className="navbar-brand">Telstar</div>
 
         <button
@@ -26,9 +27,6 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">About Us</Link>
             </li>
           </ul>
 

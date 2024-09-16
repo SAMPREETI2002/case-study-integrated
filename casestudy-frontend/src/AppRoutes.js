@@ -26,8 +26,8 @@ const AppRoutes = () => {
       <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/loggedinloginpage" />} />
 
       {/* Routes accessible to logged-in users */}
-      <Route path="/postpaid" element={isAuthenticated ? <PostpaidPlan /> : <Navigate to="/login" />} />
-      <Route path="/prepaid" element={isAuthenticated ? <PrepaidPlan /> : <Navigate to="/login" />} />
+      <Route path="/postpaid" element={<PostpaidPlan /> } />
+      <Route path="/prepaid" element={<PrepaidPlan />} />
       <Route path="/invoice" element={isAuthenticated ? <Invoice /> : <Navigate to="/login" />} />
       <Route path="/payment-gateway" element={isAuthenticated ? <PaymentGateway /> : <Navigate to="/login" />} />
       <Route path="/loggedinloginpage" element={isAuthenticated ? <LoggedInLoginPage /> : <Navigate to="/login" />} />

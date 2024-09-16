@@ -1,0 +1,19 @@
+/* src/components/ImageSlider.css */
+.slider-container {
+  width: 100vw;  /* Full width of the viewport */
+  height: 80vh;  /* Adjust height as needed */
+  overflow: hidden; /* Hide any overflow from images */
+  position: relative; /* Position for absolute child elements */
+}
+
+.slider-wrapper {
+  display: flex;          /* Display images in a row */
+  transition: transform 0.5s ease-in-out;  /* Smooth transition for sliding */
+}
+
+.slider-image {
+  min-width: 100vw;  /* Each image takes full viewport width */
+  height: 80vh;      /* Ensure the height remains consistent */
+  object-fit: cover; /* Ensure the images cover the space without distortion */
+}
+

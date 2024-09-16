@@ -30,7 +30,8 @@
   
   p {
     font-size: 1.2rem;
-    color: #666;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
   }
   
   /* Plan container styling */
@@ -78,8 +79,8 @@
     position: absolute; /* Position the button at the bottom */
     bottom: 1rem;
     background-color: white; /* Set background color to white */
-    padding: 0.5rem; /* Add padding if needed */
-    border-radius: 2px; /* Thin border radius for a subtle rounding */
+    padding: 0.1rem; /* Add padding if needed */
+    border-radius: 3px; /* Thin border radius for a subtle rounding */
   }
   
   

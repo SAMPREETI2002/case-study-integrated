@@ -1,0 +1,79 @@
+.about-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-container h1 {
+    color: black;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    margin: 15px;
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    background-color: #083D77;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.review {
+    background-color: #003366;
+    margin: 10px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.review p {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+}

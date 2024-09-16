@@ -78,11 +78,11 @@ button {
   border-radius: 20px;
 }
 
-.buttonplace {
+/* .buttonplace {
   display: flex;
   justify-content: center;
   width: auto;
-}
+} */
 
 .plan-details {
   display: flex;

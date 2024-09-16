@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import './Landingpage.css'; // Import your CSS file
-
+import About from './About';
+import ImageSlider from './ImageSlider';
 function LandingPage() {
   return (
     <div className="landing-container">
+      <ImageSlider/>
       <main>
         <h1>Connecting Lives at Your Fingertips.</h1>
         <p>Get exclusive offers on the purchase of any plans</p>
@@ -32,6 +36,7 @@ function LandingPage() {
             </div>
           </div>
         </div>
+        <About/>
       </main>
     </div>
   );

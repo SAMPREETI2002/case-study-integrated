@@ -1,0 +1,64 @@
+/* Full-page layout to center the container */
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    /* Light background for the entire page */
+  }
+  
+  main {
+    
+    padding: 40px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    width: 100%; /* Ensures it doesn't exceed the width on smaller screens */
+    text-align: center;
+  }
+  
+  /* Admin heading */
+  h1 {
+    color: #083D77;
+    margin-bottom: 20px;
+  }
+  
+  /* Admin actions buttons container */
+  .admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Styling for admin buttons */
+  .admin-button {
+    background-color: #083D77;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Link inside button styling */
+  .admin-button a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  /* Hover effect for the buttons */
+  .admin-button:hover {
+    background-color: #002C5F;
+  }
+  
+  /* No underline on hover */
+  .admin-button a:hover {
+    text-decoration: none;
+  }
+  

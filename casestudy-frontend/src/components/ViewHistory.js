@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './view-history.css'; // Import the CSS file
 
 function ViewHistory() {
   const [customerEmail, setCustomerEmail] = useState('banthi@gmail.com'); // Replace with actual email or state
@@ -29,64 +30,21 @@ function ViewHistory() {
     fetchCustomerHistory();
   }, [customerEmail]);
 
-  const containerStyle = {
-    padding: '20px',
-    backgroundColor: '#f4f4f4',
-    minHeight: '100vh'
-  };
-
-  const headerStyle = {
-    textAlign: 'center',
-    color: '#333',
-    marginBottom: '20px'
-  };
-
-  const listStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '20px',
-    listStyle: 'none',
-    padding: 0,
-    margin: 0
-  };
-
-  const listItemStyle = {
-    backgroundColor: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-    padding: '20px',
-    flex: '1 1 calc(33% - 20px)', // Responsive design
-    boxSizing: 'border-box'
-  };
-
-  const headingStyle = {
-    marginTop: 0,
-    marginBottom: '10px',
-    fontSize: '1.25em',
-    color: '#333'
-  };
-
-  const paragraphStyle = {
-    margin: '5px 0',
-    color: '#555'
-  };
-
   return (
-    <div style={containerStyle}>
-      <h2 style={headerStyle}>Plan Details</h2>
+    <div className="plan-container">
+      <h2>Plan Details</h2>
       {planDetails.length === 0 ? (
         <p style={{ textAlign: 'center' }}>No plans found.</p>
       ) : (
-        <ul style={listStyle}>
+        <div className="plan-list">
           {planDetails.map(plan => (
-            <li key={plan.planId} style={listItemStyle}>
-              <h3 style={headingStyle}>{plan.planName}</h3>
-              <p style={paragraphStyle}>Description: {plan.description}</p>
-              <p style={paragraphStyle}>Rate Per Unit: {plan.ratePerUnit}</p>
-              {/* Add more fields as needed */}
-            </li>
+            <div key={plan.planId} className="plan-item">
+              <h3 className="plan-title">{plan.planName}</h3>
+              <p className="plan-description">Description: {plan.description}</p>
+              <p className="plan-description">Rate Per Unit: {plan.ratePerUnit}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
