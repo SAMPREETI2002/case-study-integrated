@@ -21,9 +21,6 @@ function AddCustomer() {
 
   return (
     <div className="container">
-      <header>
-        <div className="logo">TELSTAR</div>
-      </header>
 
       <main>
         <h1>Add Customer</h1>

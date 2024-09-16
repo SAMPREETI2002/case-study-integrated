@@ -1,6 +1,14 @@
 /* General container style */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the wrapper takes up the full height of the page */
+}
+
 .container {
     font-family: Arial, sans-serif;
+    flex: 1;
   }
   
   /* Header styling */

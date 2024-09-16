@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './InvoiceDisplay.css'; // Import the CSS file
+import './styles/InvoiceDisplay.css'; // Import the CSS file
 
 function InvoiceDisplay() {
   const [invoice, setInvoice] = useState(null);

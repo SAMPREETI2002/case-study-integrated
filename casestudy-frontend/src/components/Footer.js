@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaTwitter, FaEnvelope, FaPhone } from 'react-icons/fa'; // Import specific icons
-import './Footer.css'; // Import your existing CSS
+import './styles/Footer.css'; // Import your existing CSS
 
 function Footer() {
     return (

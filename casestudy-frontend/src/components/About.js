@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'; // Import the CSS file
+import './styles/About.css'; // Import the CSS file
 
 const About = () => {
     // Sample data for images and descriptions

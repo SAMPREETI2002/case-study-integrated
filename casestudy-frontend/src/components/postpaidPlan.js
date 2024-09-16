@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Hook for navigation
 import { UserContext } from '../UserContext'; // Fetch email from context
-import './PrepaidPlan.css'; // Import the CSS file
+import './styles/PrepaidPlan.css'; // Import the CSS file
 
 const PostpaidPlans = () => {
   const [postpaidPlans, setPostpaidPlans] = useState([]);

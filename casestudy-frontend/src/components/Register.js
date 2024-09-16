@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../UserContext';
-import './auth1.css';
+import './styles/auth1.css';
 
 function RegisterPage() {
   const [name, setName] = useState('');

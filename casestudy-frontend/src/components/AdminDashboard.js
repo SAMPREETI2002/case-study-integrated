@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './adminpage.css'; // Import your CSS file
+import './styles/adminpage.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext'; // Import the UserContext
+import img6 from '../assets/images/img6.png'; // Import the image
 
 function AdminDashboard() {
   const { isAdmin, isAuthenticated } = useContext(UserContext); // Access admin status and authentication status
@@ -17,11 +18,12 @@ function AdminDashboard() {
 
   return (
     <div className="container">
-      <main>
-        <h1>Admin Dashboard</h1>
+      <main>  
+      <h1>Welcome Admin!</h1>
+        {/* Image above the Admin Dashboard heading */}
+        <img src={img6} alt="Admin banner" className="admin-banner" />
         {isAdmin ? (
           <>
-            <p>Welcome, Admin!</p>
             <div className="admin-actions">
               <button className="admin-button">
                 <Link to="/addplans">Add Plans</Link>

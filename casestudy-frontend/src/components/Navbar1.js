@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import { UserContext } from '../UserContext'; // Import UserContext
-import './Navbar1.css'; // Import the CSS file
+import './styles/Navbar1.css'; // Import the CSS file
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

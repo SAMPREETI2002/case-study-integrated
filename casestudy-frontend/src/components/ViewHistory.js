@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './view-history.css'; // Import the CSS file
+import './styles/view-history.css'; // Import the CSS file
 
 function ViewHistory() {
   const [customerEmail, setCustomerEmail] = useState('banthi@gmail.com'); // Replace with actual email or state

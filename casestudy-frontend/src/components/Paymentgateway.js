@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
-import './payment-gateway.css';
+import './styles/payment-gateway.css';
 import { useLocation } from 'react-router-dom';
 import { FaCreditCard, FaGooglePay, FaPaypal, FaPhone, FaWallet } from 'react-icons/fa';
 import { UserContext } from '../UserContext'; // Ensure UserContext is correctly set up

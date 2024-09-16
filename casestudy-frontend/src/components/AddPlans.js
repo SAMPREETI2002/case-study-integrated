@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../UserContext';
-import '../App.css';
+import './styles/adminaddition.css';
 
 function AddPlans() {
   const [plan, setPlan] = useState({

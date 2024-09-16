@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Hook for navigation
 import { UserContext } from '../UserContext'; // Fetch email from context
-import './PrepaidPlan.css'; // Import the CSS file
+import './styles/PrepaidPlan.css'; // Import the CSS file
 
 const PrepaidPlans = () => {
   const [prepaidPlans, setPrepaidPlans] = useState([]);
@@ -29,6 +29,7 @@ const PrepaidPlans = () => {
   };
 
   return (
+    <div className ="main-content">
     <div className="container">
       <main>
         <h1>Prepaid Plans</h1>
@@ -57,6 +58,7 @@ const PrepaidPlans = () => {
           )}
         </div>
       </main>
+    </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ImageSlider.css';  // Assuming ImageSlider.css is in the same folder as ImageSlider.js
+import './styles/ImageSlider.css';  // Assuming ImageSlider.css is in the same folder as ImageSlider.js
 import img1 from '../assets/images/image1.jpg'; // Correct path to the images folder
 import img2 from '../assets/images/image2.jpg'; // Correct path to the images folder
 import img3 from '../assets/images/image3.jpg'
