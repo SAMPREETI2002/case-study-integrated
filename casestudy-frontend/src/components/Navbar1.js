@@ -55,9 +55,9 @@ const Navbar = () => {
           {/* Profile and Logout */}
           <ul className="navbar-nav ms-auto">
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Profile
-              </a>
+            <button className="nav-link dropdown-toggle btn btn-link" type="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Profile</button>
+
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><span className="dropdown-item">{userEmail}</span></li>
                 <li><hr className="dropdown-divider" /></li>

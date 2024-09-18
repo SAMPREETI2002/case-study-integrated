@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext } from 'react';
 import axios from 'axios';
 import './styles/view-history.css'; // Import the CSS file
+import { UserContext } from '../UserContext'; // Import the useUser hook
 
 function ViewHistory() {
-  const [customerEmail, setCustomerEmail] = useState('banthi@gmail.com'); // Replace with actual email or state
-  const [plansList, setPlansList] = useState([]);
+  const { userEmail} = useContext(UserContext);
   const [planDetails, setPlanDetails] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
     const fetchCustomerHistory = async () => {
       try {
-        const response = await axios.post('http://localhost:9099/viewHistory', { customerMail: customerEmail });
+        const response = await axios.post('http://localhost:9099/viewHistory', { customerMail: userEmail });
         const { plansList } = response.data;
         console.log('Plans List:', plansList); // Debug log for plansList
-        setPlansList(plansList);
 
         if (plansList.length > 0) {
           // Fetch details for each plan
@@ -26,6 +25,8 @@ function ViewHistory() {
           const plansData = detailsResponses.map(res => res.data.plan);
           console.log('Plan Details:', plansData); // Debug log for planDetails
           setPlanDetails(plansData);
+        } else {
+          setPlanDetails([]); // Set planDetails to empty if no plans
         }
 
         setLoading(false); // Set loading to false after fetching
@@ -36,7 +37,7 @@ function ViewHistory() {
     };
 
     fetchCustomerHistory();
-  }, [customerEmail]);
+  }, [userEmail]); // Use userEmail from context as dependency
 
   console.log('Rendering planDetails:', planDetails); // Final check to see if planDetails is set correctly
 
@@ -53,7 +54,7 @@ function ViewHistory() {
             <div key={index} className="plan-item">
               <h3 className="plan-title">{plan.planName}</h3>
               <p className="planDescription">{plan.description}</p>
-              <br/>
+              <br />
               <p className="planDescription">Rate Per Unit: {plan.ratePerUnit}</p>
             </div>
           ))}

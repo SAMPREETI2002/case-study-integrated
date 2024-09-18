@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Hook for navigation
-import { UserContext } from '../UserContext'; // Fetch email from context
+// import { UserContext } from '../UserContext'; // Fetch email from context
 import './styles/PrepaidPlan.css'; // Import the CSS file
 
 const PrepaidPlans = () => {
   const [prepaidPlans, setPrepaidPlans] = useState([]);
   const [error, setError] = useState(null);
-  const { userEmail } = useContext(UserContext); // Fetch the email from context
+  // const { userEmail } = useContext(UserContext); // Fetch the email from context
   const navigate = useNavigate();
 
   useEffect(() => {
