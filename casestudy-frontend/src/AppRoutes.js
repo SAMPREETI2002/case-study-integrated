@@ -14,6 +14,8 @@ import Invoice from './components/Invoice';
 import PaymentGateway from './components/Paymentgateway';
 import LoggedInLoginPage from './components/LoggedInLoginpage';
 import LoggedOutPage from './components/LoggedOut';
+import ThankYou from './components/Thankyou';
+import Checkout from './components/checkoutpage';
 
 const AppRoutes = () => {
   const { isAuthenticated, isAdmin } = useContext(UserContext);
@@ -31,7 +33,9 @@ const AppRoutes = () => {
       <Route path="/invoice" element={isAuthenticated ? <Invoice /> : <Navigate to="/login" />} />
       <Route path="/payment-gateway" element={isAuthenticated ? <PaymentGateway /> : <Navigate to="/login" />} />
       <Route path="/loggedinloginpage" element={isAuthenticated ? <LoggedInLoginPage /> : <Navigate to="/login" />} />
-      <Route path="/ViewHistory" element={isAuthenticated ? <ViewHistory /> : <Navigate to="/ViewHistory" />} />
+      <Route path="/ViewHistory" element={isAuthenticated ? <ViewHistory /> : <Navigate to="/login" />} />
+      <Route path="/Paymentsuccess" element={isAuthenticated ? <ThankYou /> : <Navigate to="/login" />} />
+      <Route path="/checkout" element={isAuthenticated ? <Checkout/> : <Navigate to="/login" />} />
       {/* Admin Routes */}
       <Route path="/admindashboard" element={isAuthenticated && isAdmin ? <AdminDashboard /> : <Navigate to={isAuthenticated ? "/loggedinloginpage" : "/login"} />} />
       <Route path="/addplans" element={isAuthenticated && isAdmin ? <AddPlans /> : <Navigate to={isAuthenticated ? "/loggedinloginpage" : "/login"} />} />

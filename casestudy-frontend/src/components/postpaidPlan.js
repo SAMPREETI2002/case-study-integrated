@@ -1,13 +1,11 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Hook for navigation
-// import { UserContext } from '../UserContext'; // Fetch email from context
 import './styles/PrepaidPlan.css'; // Import the CSS file
 
 const PostpaidPlans = () => {
   const [postpaidPlans, setPostpaidPlans] = useState([]);
   const [error, setError] = useState(null);
-  // const { userEmail } = useContext(UserContext); // Fetch the email from context
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,14 +21,13 @@ const PostpaidPlans = () => {
     fetchPostpaidPlans();
   }, []);
 
-  const handleBuyPlan = (planDetails) => {
-    // Navigate to Invoice page with selected plan details
-    navigate('/invoice', { state: { planDetails } });
+  const handleBuyPlan = (planId) => {
+    // Navigate to Checkout page with selected planId and planType
+    navigate('/checkout', { state: { planId, planType: 'POSTPAID' } });
   };
 
   return (
     <div className="container">
-  
       <main>
         <h1>Postpaid Plans</h1>
         <p>Select a plan that suits you best.</p>
@@ -41,10 +38,11 @@ const PostpaidPlans = () => {
             postpaidPlans.map((plan) => (
               <div className="plan" key={plan.id}>
                 <h3 className="plan-name">{plan.planName}</h3>
-                <h4 className="plan-description">{plan.planDescription}</h4>
-                <p>Billing period: { plan.billingCycle}</p>
+                <p>{plan.planDescription}</p>
+                <p>Billing period: {plan.billingCycle} days</p>
+
                 <div className="buttonplace">
-                  <button onClick={() => handleBuyPlan(plan)} className="buy-button">Buy Plan</button>
+                  <button onClick={() => handleBuyPlan(plan.planId)} className="buy-button">Buy Plan</button>
                 </div>
               </div>
             ))

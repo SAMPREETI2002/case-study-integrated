@@ -1,0 +1,57 @@
+.checkout-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .plan-details-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .plan-details-box h2 {
+    margin-top: 0;
+  }
+  
+  .contact-form {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-form h2 {
+    margin-top: 0;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error-message {
+    color: red;
+    margin: 10px 0;
+  }
+  
+  .subscribe-button {
+    background-color: #48CFCB;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #37bfb8;
+  }
+  

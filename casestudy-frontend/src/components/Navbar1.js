@@ -45,10 +45,10 @@ const Navbar = () => {
               <Link className="nav-link" to="/loggedinloginpage">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/invoice">Generate Invoice</Link>
+              <Link className="nav-link" to="/invoice">View Invoice</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ViewHistory">Payment History</Link>
+              <Link className="nav-link" to="/ViewHistory">My Plans</Link>
             </li>
           </ul>
 

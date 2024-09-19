@@ -2,13 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Landingpage.css'; // Import your CSS file
+import PlanStatus from './PlanStatus';
 function LoggedInLandingPage() {
   return (
     <div className="landing-container">
       <main>
         <h1>Welcome Back!</h1>
-        <p>Continue exploring our exclusive offers and plans.</p>
-
+        {/* <p>Continue exploring our exclusive offers and plans.</p> */}
+        <PlanStatus/>
         <h2>Featured Plans</h2>
         <div className="plans-container">
           <div className="plan">
