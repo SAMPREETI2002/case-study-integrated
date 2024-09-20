@@ -27,12 +27,18 @@ const ThankYou = () => {
             setPlanName(planResponse.data.plan.planName); // Set the planName
 
             if (state.planType === 'POSTPAID' && state.invoiceId) {
-              // If the planType is POSTPAID and invoiceId is not null, trigger the /payPostpaidInvoice endpoint
-              await axios.post("http://localhost:9099/payPostpaidInvoice", {
+              // If the planType is POSTPAID, trigger the /payPostpaidInvoice endpoint
+              const response = await axios.post("http://localhost:9099/payPostpaidInvoice", {
                 customerMail: userEmail,
                 invoiceId: state.invoiceId,
                 changePlan: state.changePlan || false, // Default to false if not provided
               });
+
+              if (response.status === 200) {
+                setInvoice(response.data.invoice); // Set invoice data from the response
+              } else {
+                setMessage("Error paying invoice: " + response.data.message);
+              }
             } else {
               // Otherwise, trigger the /buyPlan endpoint
               const buyPlanResponse = await axios.post("http://localhost:9099/buyPlan", {
@@ -84,7 +90,8 @@ const ThankYou = () => {
               <div>
                 <h3>Invoice Details</h3>
                 <p><strong>Customer Name:</strong> {invoice.customerName}</p>
-                <p><strong>Plan Name:</strong> {invoice.planName}</p>
+                <p><strong>Email:</strong> {userEmail}</p>
+                <p><strong>Plan Name:</strong> {planName}</p>
                 <p><strong>Plan Type:</strong> {invoice.planType}</p>
                 <p><strong>Date Purchased:</strong> {new Date(invoice.date).toLocaleDateString()}</p>
                 <p><strong>Due Date:</strong> {new Date(invoice.dueDate).toLocaleDateString()}</p>
