@@ -4,6 +4,7 @@ import { UserContext } from "../UserContext"; // Adjust the import path as neces
 import axios from "axios";
 import { checkPlanStatus } from './CheckPlanStatus'; // Import the checkPlanStatus function
 import './styles/Thankyou.css';
+import { downloadInvoice } from './DownloadInvoice';
 
 const ThankYou = () => {
   const location = useLocation();
@@ -76,6 +77,10 @@ const ThankYou = () => {
     fetchPlanDetails();
   }, [location, userEmail]);
 
+  const handleDownloadInvoice = (invoiceId) => {
+    downloadInvoice(invoiceId);
+  };
+
   return (
     <div>
       <h2>Thank You for Your Purchase!</h2>
@@ -98,6 +103,7 @@ const ThankYou = () => {
                 <p><strong>Units:</strong> {invoice.units}</p>
                 <p><strong>Amount:</strong> Rs.{invoice.amount.toFixed(2)}</p>
                 <p><strong>Status:</strong> {invoice.status}</p>
+                <button onClick={() => handleDownloadInvoice(invoice.invoiceId)}>Download Invoice</button>
               </div>
             )
           )}

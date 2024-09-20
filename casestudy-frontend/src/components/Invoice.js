@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { UserContext } from '../UserContext'; // Adjust the import path as necessary
 import './styles/InvoiceDisplay.css'; // Import the CSS file
+import { downloadInvoice } from './DownloadInvoice';
 
 function InvoiceDisplay() {
   const { userEmail } = useContext(UserContext); // Get userEmail from UserContext
@@ -43,6 +44,10 @@ function InvoiceDisplay() {
       fetchInvoiceHistory();
     }
   }, [userEmail]);
+
+  const handleDownloadInvoice = (invoiceId) => {
+    downloadInvoice(invoiceId);
+  };
 
   return (
     <div className="invoice-container">
@@ -102,6 +107,7 @@ function InvoiceDisplay() {
                   </div>
                 </>
               )}
+              <button onClick={() => handleDownloadInvoice(invoice.invoiceId)}>Download Invoice</button>
             </div>
           );
         })
