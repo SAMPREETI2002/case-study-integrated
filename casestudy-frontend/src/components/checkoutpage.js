@@ -41,13 +41,13 @@ const Checkout = () => {
 
   const validateContactDetails = async () => {
     try {
-      const response = await axios.post('http://localhost:9099/customerdetails', { email });
-      const { customerName, customerPhone, currentPlan } = response.data;
+      const response = await axios.post('http://localhost:9099/validateCustomer', { email });
+      const { customerPhone } = response.data;
 
       if (customerPhone !== phone) {
         setError('Invalid phone number.');
       } else {
-        setCustomerDetails({ customerName, customerPhone, currentPlan });
+        setCustomerDetails({customerPhone});
         setError('');
       }
     } catch (error) {

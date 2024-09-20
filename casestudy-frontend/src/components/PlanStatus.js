@@ -70,7 +70,7 @@ const PlanStatus = () => {
                     checked={isRenew}
                     onChange={() => setIsRenew(!isRenew)}
                   />
-                  Renew Plan
+                  Change Plan
                 </label>
               </div>
 
